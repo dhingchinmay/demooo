@@ -3,11 +3,13 @@
 <br>
 <mat-card id="card" style="text-align: center;">
   <header>
-    <h1>Contacts</h1>
+    <h1>Contact Us </h1>
+    <mat-icon>facebook</mat-icon>
+    <mat-icon>whatsapp</mat-icon>
   </header>
   <div class="content">
-    
-      <form>
+
+    <form>
       <mat-form-field>
         <input matInput placeholder="Name" required>
         <mat-icon matSuffix>person</mat-icon>
@@ -25,15 +27,20 @@
         <mat-icon matSuffix>create</mat-icon>
       </mat-form-field><br>
       <mat-form-field>
-        <textarea matInput placeholder="Textarea" required></textarea>
+        <textarea matInput placeholder="Comment or Feedback" required></textarea>
         <mat-icon matSuffix>save</mat-icon>
       </mat-form-field><br>
       <button mat-raised-button class="btn-custom">Send Now<i class="material-icons">
           send</i><br>
-          </button>
-        </form>
-        
+      </button>
+      <p class="horizontal-line-text">
+        <span>or</span>
+      </p>
+      <p>Directly Contact Us <br>
+        Mobile: <a href="#">+91 7610850721</a><br>
+        Mail: <a href="#">chinmaydhi123@gmail.com</a>
+      </p>
+    </form>
+
   </div>
 </mat-card>
-
-<app-example></app-example>

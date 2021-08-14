@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { GoogleLoginProvider, SocialAuthService } from 'angularx-social-login';
 
 @Component({
   selector: 'app-login-user',
@@ -14,7 +15,9 @@ export class LoginUserComponent implements OnInit {
   errorMessage = ''; // validation error handle
   error: { name: string, message: string } = { name: '', message: '' }; // for firbase error handle
 
-  constructor(private authservice: AuthService, private router: Router) { }
+  constructor(private authservice: AuthService,
+    private router: Router,
+    private authService: SocialAuthService) { }
   ngOnInit() {
     if (localStorage.getItem('email')?.length && localStorage.getItem('uid')?.length) {
       this.router.navigate(['/home']);
@@ -25,6 +28,13 @@ export class LoginUserComponent implements OnInit {
     this.errorMessage = '';
     this.error = { name: '', message: '' };
   }
+
+  // signInHandler(): void {
+  //   this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then((data: any) => {
+  //     localStorage.setItem('google_auth', JSON.stringify(data));
+  //     this.router.navigateByUrl('/home').then();
+  //   });
+  // }
 
   login() {
     this.clearErrorMessage();

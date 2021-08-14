@@ -1,3 +1,4 @@
+<br>
 <div>
   <mat-toolbar>
     <span class="title-center">Property Details</span>
@@ -24,14 +25,16 @@
               {{product.address}}
 
             </mat-card-content>
-
+            <hr class="invis">
             <mat-card-actions>
               <button mat-button color="black">
-                <mat-icon>favorite</mat-icon>Like
+
               </button>
-              <button mat-button color="black" [routerLink]='["/Contact"]'>Contact-us</button>
-              <button mat-button color="primary">
-                <mat-icon>share</mat-icon> <a href="https://web.whatsapp.com/" color="primary">Share</a>
+              <button mat-button color="black" [routerLink]='["/Contact"]'>
+                <mat-icon>book</mat-icon>Book
+              </button>
+              <button mat-button color="black">
+                <mat-icon>share</mat-icon> <a href="https://web.whatsapp.com/">Share</a>
               </button>
             </mat-card-actions>
           </mat-card>
@@ -41,14 +44,13 @@
   </div>
 </div>
 
-
 <!-- properties for rent -->
 <br>
 <mat-toolbar>
   <span class="title-center">Properties For Rent</span>
 </mat-toolbar>
 <br>
-<div class="about-box">
+<div class="about-box ">
   <div class="container imagesss">
     <div class="row">
       <hr class="invis">
@@ -58,22 +60,18 @@
             <div class="portfolio-items">
               <div class="col-sm-6 col-md-4 col-lg-4 div" *ngFor="let pro of proc">
                 <div class="portfolio-item ">
-                  <div class="hover-bg "> <a href="" data-lightbox-gallery="gallery1">
+                  <div class="hover-bg"><a href="" data-lightbox-gallery="gallery1">
                       <div class="hover-text asdff">
-                        <h4>
-                          <br>{{pro.name}}
-                          <h6><i class="fa fa-hotel col_2"></i> </h6>
-                        </h4>{{pro.price}}
-                        <h5><i class="fa fa-hotel col_2"></i> {{pro.Details}}</h5>
-
+                        <h4><i class="fa fa-hotel col_2"></i>{{pro.name}}<br></h4>
+                        <h5><i class="fa fa-hotel col_2"></i>{{pro.price}}<br></h5>
+                        <h5><i class="fa fa-hotel col_2"></i>{{pro.Details}}</h5>
                         <section>
-                          <div class="example-button-row">{{pro.description}}<br>
-
-                          </div>
+                          <div class="example-button-row">{{pro.description}}<br></div>
                         </section>
                       </div>
                       <img src="{{pro.src}}" class="img-responsive" alt="Project Title">
                     </a> </div>
+                  <button mat-button [routerLink]='["/Contact"]' class="colorrr">More Details</button>
                 </div>
               </div>
             </div>

@@ -5,9 +5,7 @@
     </mat-card-header>
 
     <form class="example-form" (ngSubmit)="login()">
-
       <mat-card-content>
-
         <mat-form-field class="example-full-width">
           <input matInput type="email" name="email" [(ngModel)]="email" placeholder="Enter email Id" required>
         </mat-form-field>
@@ -23,6 +21,16 @@
       <div class="title-center"><br>New User<a [routerLink]='["/Register"]'><br>Register</a></div>
 
     </form>
+
+    <!-- <p class="horizontal-line-text">
+      <span>or</span>
+    </p>
+
+    <button class="btn btn-block google-sign-in" (click)="signInHandler()">
+      <img [src]="'assets/Images/google.svg'" alt="google" />
+      <span>SignIn with Google</span>
+    </button> -->
+
     <div class="form-group">
       <p *ngIf="errorMessage.length > 0" class="text-danger">
         {{errorMessage}}</p>
@@ -31,4 +39,5 @@
         {{error.message}} </p>
     </div>
   </mat-card>
+
 </div>

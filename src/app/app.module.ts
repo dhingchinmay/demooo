@@ -28,6 +28,9 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { PropertyComponent } from './property/property.component';
 import { ExampleComponent } from './example/example.component';
+import { GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +45,8 @@ import { ExampleComponent } from './example/example.component';
     LogoutComponent,
     PropertyComponent,
     ExampleComponent,
+    DashboardComponent,
+    SplashScreenComponent,
 
   ],
   imports: [
@@ -60,10 +65,26 @@ import { ExampleComponent } from './example/example.component';
     GoogleMapsModule,
     AngularFirestoreModule,
     AngularFireDatabaseModule,
+    SocialLoginModule,
     AngularFireModule.initializeApp(environment.firebase, 'demoo-projectt'),
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+             '932254480272-8k8e1jjv493do40g8nb08jnm0tiqg2mn.apps.googleusercontent.com'
+            )
+          }
+        ]
+      } as SocialAuthServiceConfig
+    }
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

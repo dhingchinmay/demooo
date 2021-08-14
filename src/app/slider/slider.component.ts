@@ -24,7 +24,7 @@ export class SliderComponent implements OnInit {
     dots: true,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 1500
+    autoplaySpeed: 1200
   };
   constructor() { }
 
@@ -55,7 +55,6 @@ export class SliderComponent implements OnInit {
     //console.log('beforeChange');
   }
 }
-
 
 /*
 import { Component, OnInit } from '@angular/core';
@@ -108,9 +107,7 @@ export class SliderComponent implements OnInit {
     console.log('beforeChange');
   }
   constructor() { }
-
+  
   ngOnInit(): void {
-    
   }
-
 }*/

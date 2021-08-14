@@ -56,8 +56,6 @@ export class AuthService {
       });
   }
 
-
-
   loginWithEmail(email: string, password: string) {
     return this.afu.signInWithEmailAndPassword(email, password)
       .then((user: any) => {

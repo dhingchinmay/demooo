@@ -38,5 +38,4 @@ export class CardComponent implements OnInit {
       console.log('this.product', this.products);
     })
   }
-
 }

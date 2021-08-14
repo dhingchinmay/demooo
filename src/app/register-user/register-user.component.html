@@ -25,6 +25,16 @@
       <div class="register title-center"><br>Do you have an account ?<a [routerLink]='["/Login"]'> <br>Login</a></div>
 
     </form>
+
+     <!-- <p class="horizontal-line-text">
+      <span>or</span>
+    </p>
+
+    <button class="btn btn-block google-sign-in" (click)="signUpHandler()">
+      <img [src]="'assets/Images/google.svg'" alt="google" />
+      <span>SignIn with Google</span>
+    </button> -->
+
     <div class="form-group">
       <p *ngIf="errorMessage.length > 0" class="text-danger">
         {{errorMessage}}</p>

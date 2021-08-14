@@ -18,7 +18,6 @@ const routes: Routes = [
   { path: 'Maps', component: MapsComponent },
   { path: 'LogOut', component: LogoutComponent },
   { path: 'Property', component: PropertyComponent },
-
 ];
 
 @NgModule({
