@@ -47,8 +47,7 @@ export class AuthService {
       .then((user) => {
         this.loginWithEmail(email, password);
         this.authState = user
-        console.log('this.authState ####', this.authState);
-
+        console.log('this.authState', this.authState);
       })
       .catch(error => {
         console.log(error)

@@ -14,7 +14,7 @@
             </mat-card-header>
             <img mat-card-image src="{{product.src}}">
             <div class="feature_2im2 clearfix">
-              <h4 class="pull-right mgt"><a href="#" class="bg_4">For Rent</a></h4>
+              <h4 class="pull-right mgt"><a href="#" class="bg_4" >For Rent</a></h4>
             </div>
             <mat-card-content>
               <p>
@@ -30,7 +30,7 @@
               <button mat-button color="black">
 
               </button>
-              <button mat-button color="black" [routerLink]='["/Contact"]'>
+              <button mat-button color="black" (click)="myClickFunction($event)">
                 <mat-icon>book</mat-icon>Book
               </button>
               <button mat-button color="black">
@@ -45,7 +45,6 @@
 </div>
 
 <!-- properties for rent -->
-<br>
 <mat-toolbar>
   <span class="title-center">Properties For Rent</span>
 </mat-toolbar>
@@ -62,9 +61,9 @@
                 <div class="portfolio-item ">
                   <div class="hover-bg"><a href="" data-lightbox-gallery="gallery1">
                       <div class="hover-text asdff">
-                        <h4><i class="fa fa-hotel col_2"></i>{{pro.name}}<br></h4>
-                        <h5><i class="fa fa-hotel col_2"></i>{{pro.price}}<br></h5>
-                        <h5><i class="fa fa-hotel col_2"></i>{{pro.Details}}</h5>
+                        <h4>{{pro.name}}<br></h4>
+                        <h5>{{pro.price}}<br></h5>
+                        <h5>{{pro.Details}}</h5>
                         <section>
                           <div class="example-button-row">{{pro.description}}<br></div>
                         </section>
@@ -81,3 +80,23 @@
     </div>
   </div>
 </div>
+
+
+<!-- const port = 3000 
+app.listen(port, ()=>{
+  console.log(`Example app listening at http://localhost:${port}`)
+})-->
+<!-- const app = express() -->
+
+<!-- const express = require('express')  
+const app = express()
+const port = 3000
+const testData = {
+  name: 'John Doe',
+  age: '30',
+  account_balance: '15.5'
+}
+app.get('/', (req, res) => res.send(testData))
+app.listen(port, () => console.log(`Server listening on port ${port}`))-->
+
+<!-- app.set('port', process.env.PORT || 8080); -->

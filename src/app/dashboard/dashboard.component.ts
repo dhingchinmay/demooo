@@ -25,7 +25,7 @@ export class DashboardComponent implements OnInit {
   }
   signOut(): void {
     localStorage.removeItem('google_auth');
-    this.router.navigateByUrl('/home').then();
+    this.router.navigate(['/home']).then();
   }
 
 }

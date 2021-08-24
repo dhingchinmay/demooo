@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
 import { Router } from '@angular/router';
 import { DataserviceService } from '../services/dataservice.service';
 
@@ -25,7 +26,7 @@ export class HomeComponent implements OnInit {
   messageSuccess: boolean | undefined;
 
 
-  constructor(private router: Router, private dataservice: DataserviceService) { }
+  constructor(private db: AngularFireDatabase,private router: Router, private dataservice: DataserviceService) { }
 
   ngOnInit(): void {
     this.messageSuccess = true;
@@ -36,7 +37,7 @@ export class HomeComponent implements OnInit {
       } else {
         this.sliderValue = true;
       }
-      console.log('res#####', res);
+      console.log('res', res);
     });
     if (!localStorage.getItem('email')?.length && !localStorage.getItem('uid')?.length) {
       this.router.navigate(['/Login']);

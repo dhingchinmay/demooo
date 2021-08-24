@@ -32,6 +32,10 @@ export class PropertyComponent implements OnInit {
   resultItems = [...this.items];
   constructor(private router: Router, private dataService: DataserviceService) { }
 
+  myClickFunction(event: any) { 
+    alert("Booked");
+    console.log(event);
+ }
 
   ngOnInit(): void {
     this.dataService.getSearchValue().subscribe((res: any) => {
@@ -40,7 +44,7 @@ export class PropertyComponent implements OnInit {
       if (res.length) {
         this.items.forEach((item: any) => {
           if (item.name.toLowerCase().includes(res.toLowerCase()) || item.description.toLowerCase().includes(res.toLowerCase())) {
-            console.log('Item #$#$#$#$#$#$$$$$$$$$#', item);
+            console.log('Item', item);
             this.resultItems.push(item);
           }
         })

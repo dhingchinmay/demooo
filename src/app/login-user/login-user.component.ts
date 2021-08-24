@@ -18,6 +18,7 @@ export class LoginUserComponent implements OnInit {
   constructor(private authservice: AuthService,
     private router: Router,
     private authService: SocialAuthService) { }
+    
   ngOnInit() {
     if (localStorage.getItem('email')?.length && localStorage.getItem('uid')?.length) {
       this.router.navigate(['/home']);

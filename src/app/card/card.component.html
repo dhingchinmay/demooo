@@ -12,7 +12,7 @@
           </mat-card-header>
           <img mat-card-image src="{{product.src}}">
           <div class="feature_2im2 clearfix">
-            <h4 class="pull-right mgt"><a [routerLink]="['/Property']" class="bg_1">For Rent</a></h4>
+            <h4 class="pull-right mgt"><a [routerLink]='["/Property"]' class="bg_1">For Rent</a></h4>
           </div>
 
           <mat-card-content>
@@ -20,7 +20,6 @@
               {{product.description}} <br>
               {{product.price}}
             </p>
-
           </mat-card-content>
 
           <mat-card-actions>

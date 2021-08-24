@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.isLogin = localStorage.getItem('email')?.length ? true : false;
     this.authservice.getProfileObs().subscribe((profile: any) => {
-      console.log('profile profile ###$$$', profile);
+      console.log('profile profile', profile);
       if (profile) {
         this.isLogin = profile;
       }
